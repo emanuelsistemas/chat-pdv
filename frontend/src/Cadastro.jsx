@@ -113,6 +113,12 @@ function Cadastro() {
         e.preventDefault();
 
         try {
+            // Função para remover caracteres não numéricos (pontos, traços, barras)
+            const removerFormatacao = (str) => {
+                if (!str) return '';
+                return str.replace(/[^\d]/g, '');
+            };
+            
             setIsLoading(true);
             console.log('Formulário submetido com os seguintes dados:', formData);
 
@@ -128,7 +134,7 @@ function Cadastro() {
                 email: formData.email,
                 senha: formData.senha,
                 nome: formData.nome,
-                documento: formData.documento,
+                documento: removerFormatacao(formData.documento),
                 documento_tipo: formData.documentType,
                 tipoEmpresa: formData.tipoEmpresa,
                 razaoSocial: formData.razaoSocial,

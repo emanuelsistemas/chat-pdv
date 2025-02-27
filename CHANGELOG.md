@@ -5,6 +5,11 @@ Todas as mudanças significativas neste projeto serão documentadas neste arquiv
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 e este projeto adere ao [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.5] - 2025-02-27
+
+### Modificado
+- Configurado Vite para escutar em todas as interfaces (0.0.0.0)
+
 ## [0.1.4] - 2025-02-27
 
 ### Adicionado

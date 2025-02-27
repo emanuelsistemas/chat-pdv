@@ -189,9 +189,9 @@ function Cadastro() {
     const inputClass = "block w-full px-4 pt-6 pb-2 text-gray-900 dark:text-white bg-white dark:bg-dark-300 appearance-none focus:outline-none";
     const labelClass = (field) => `absolute text-sm ${
         focusedInput === field || formData[field]
-            ? 'transform -translate-y-2 scale-90 top-2 text-accent-300 dark:text-accent-200'
+            ? 'transform -translate-y-2 scale-90 top-2 text-accent-300 dark:text-accent-200 left-4'
             : 'top-4 text-gray-500 dark:text-gray-400'
-    } left-4 transition-all duration-150 pointer-events-none`;
+    } transition-all duration-150 pointer-events-none left-4`;
 
     return (
         <div className="w-full">

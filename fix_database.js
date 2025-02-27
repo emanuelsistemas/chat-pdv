@@ -40,6 +40,7 @@ async function executeSQL() {
       } catch (err) {
         console.error(`Erro ao executar comando SQL: ${err.message}`);
         console.error(`Comando que falhou: ${command}`);
+        await client.query('ROLLBACK');
         throw err;
       }
     }

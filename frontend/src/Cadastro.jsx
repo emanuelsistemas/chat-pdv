@@ -133,12 +133,23 @@ function Cadastro() {
             const data = {
                 email: formData.email,
                 senha: formData.senha,
-                nome: formData.nome,
-                documento: removerFormatacao(formData.documento),
-                documento_tipo: formData.documentType,
-                razaoSocial: formData.razaoSocial,
-                nomeFantasia: formData.nomeFantasia || formData.nome,
-                whatsapp: formData.whatsapp,
+                data_criacao: new Date().toISOString(),
+                
+                // Dados da empresa
+                empresa: {
+                    documento: removerFormatacao(formData.documento),
+                    documento_tipo: formData.documentType,
+                    razao_social: formData.razaoSocial || "",
+                    nome_fantasia: formData.nomeFantasia || formData.nome,
+                    whatsapp: formData.whatsapp || "",
+                    created_at: new Date().toISOString()
+                },
+                
+                // Dados do usuário
+                usuario: {
+                    nome: formData.nome,
+                    email: formData.email
+                },
                 data_criacao: new Date().toISOString()
             };
 

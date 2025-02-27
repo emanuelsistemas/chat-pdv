@@ -5,6 +5,13 @@ Todas as mudanças significativas neste projeto serão documentadas neste arquiv
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 e este projeto adere ao [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.1] - 2025-02-27
+
+### Corrigido
+- Alinhamento dos labels nos campos do formulário de cadastro
+- Labels agora permanecem alinhados à esquerda quando o campo recebe foco
+
+
 ## [0.1.0] - 2025-02-27
 
 ### Adicionado

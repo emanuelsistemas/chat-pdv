@@ -108,7 +108,6 @@ function Cadastro() {
         }
     };
 
-
     // Função para lidar com o envio do formulário
     const handleSubmit = async (e) => {
         e.preventDefault();

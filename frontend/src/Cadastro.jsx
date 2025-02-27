@@ -136,10 +136,10 @@ function Cadastro() {
                 nome: formData.nome,
                 documento: removerFormatacao(formData.documento),
                 documento_tipo: formData.documentType,
-                tipoEmpresa: formData.tipoEmpresa,
                 razaoSocial: formData.razaoSocial,
                 nomeFantasia: formData.nomeFantasia || formData.nome,
-                whatsapp: formData.whatsapp
+                whatsapp: formData.whatsapp,
+                data_criacao: new Date().toISOString()
             };
 
             console.log('Enviando dados para o webhook do n8n:', data);

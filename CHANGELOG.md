@@ -5,6 +5,13 @@ Todas as mudanças significativas neste projeto serão documentadas neste arquiv
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 e este projeto adere ao [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.3] - 2025-02-27
+
+### Adicionado
+- Campo `data_criacao` adicionado ao payload enviado ao webhook n8n para registrar o momento do cadastro
+- Remoção do campo `tipoEmpresa` do payload enviado ao webhook n8n
+
+
 ## [0.1.2] - 2025-02-27
 
 ### Modificado

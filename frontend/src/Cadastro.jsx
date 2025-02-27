@@ -140,7 +140,7 @@ function Cadastro() {
             console.log('Enviando dados para o webhook do n8n:', data);
 
             // Chamar o webhook do n8n
-            const apiUrl = apiUrls.development.cadastroWebhook; // Usar a URL de desenvolvimento
+            const apiUrl = process.env.NODE_ENV === 'production' ? apiUrls.production.cadastroWebhook : apiUrls.development.cadastroWebhook;
             const response = await axios.post(apiUrl, data);
 
             console.log('Resposta do webhook do n8n:', response.data);

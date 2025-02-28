@@ -6,15 +6,15 @@ const { v4: uuidv4 } = require('uuid');
 const bodyParser = require('body-parser');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Configuração do Pool de conexão com o PostgreSQL
 const pool = new Pool({
-  user: 'postgres',
-  host: '192.168.128.4', // IP do contêiner do PostgreSQL
-  database: 'postgres',
-  password: 'your-super-secret-and-long-postgres-password',
-  port: 5432,
+  user: process.env.DB_USER || 'postgres',
+  host: process.env.DB_HOST || '192.168.128.4', // IP do contêiner do PostgreSQL
+  database: process.env.DB_NAME || 'postgres',
+  password: process.env.DB_PASSWORD || 'your-super-secret-and-long-postgres-password',
+  port: process.env.DB_PORT || 5432,
 });
 
 // Middleware
@@ -418,7 +418,7 @@ async function initializeDatabase() {
 }
 
 // Iniciar servidor
-app.listen(port, async () => {
-  console.log(`Servidor rodando na porta ${port}`);
+app.listen(process.env.PORT || 3001, async () => {
+  console.log(`Servidor rodando na porta ${process.env.PORT || 3001}`);
   await initializeDatabase();
 });
